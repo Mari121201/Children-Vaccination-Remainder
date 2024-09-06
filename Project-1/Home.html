@@ -1,0 +1,1577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Vaccination Remainder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: inline;
+
+            /*
+            background:linear-gradient(to bottom right,blue,white,yellow,skyblue,green);*/
+        }
+
+        .headerpart-2 {
+            display: none;
+        }
+
+        /*-------------navbarmain----------------*/
+        .navbar {
+            /*background:linear-gradient(to bottom,rgb(24, 128, 180),skyblue);
+            background:linear-gradient(to right,grey,rgb(50,50,50));*/
+            background: linear-gradient(to right, wheat, whitesmoke);
+            cursor: default;
+            padding: 10px;
+            padding-left: 30px;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            display: show;
+        }
+
+        .logo {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        /*------------navigation bar--------------*/
+        .bar {
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bar ul {
+            display: inline-block;
+            transform: skew(-25deg);
+        }
+
+        .bar ul li {
+            list-style: none;
+            background: linear-gradient(to right, lightgreen, orange);
+            float: left;
+            padding: 10px 20px;
+            border-right: 1px solid rgb(49, 48, 48);
+            box-shadow: 1px 1.5px 5px rgb(50, 50, 50);
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .bar ul li:first-child {
+            border-radius: 5px 0 0 10px;
+            background: linear-gradient(to right, rgb(92, 92, 250), skyblue);
+        }
+
+        .bar ul li:last-child {
+            border-radius: 0 10px 5px 0;
+        }
+
+        .bar ul li a {
+            color: inherit;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: row-reverse;
+            transform: skew(25deg);
+        }
+
+        .bar ul li:hover {
+            background: linear-gradient(to right, rgb(92, 92, 250), skyblue);
+        }
+
+        /*--------------------------------*/
+        #homepage1 {
+            column-count: 2;
+            column-gap: 75px;
+        }
+
+        /*------------title--------------*/
+        .part1 {
+            display: inline-block;
+        }
+
+        .title {
+            padding: 25px;
+            padding-left: 50px;
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 0;
+            background: linear-gradient(to right, skyblue, pink, wheat, lightgreen);
+            background-size: 5000px 500px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: default;
+            animation: animate-1 20s linear infinite;
+
+        }
+
+        @keyframes animate-1 {
+            0% {
+                background-position: 0%;
+            }
+
+            50% {
+                background-position: 100%;
+            }
+
+            100% {
+                background-position: 0%;
+            }
+        }
+
+        /*------------welcome--------------*/
+        .welpage1 {
+            animation: animate-2 5s linear;
+            animation-timeline: view();
+            animation-range: exit 250px;
+        }
+
+        @keyframes animate-2 {
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes scrolling-2 {
+            from {
+                scale: 0.5;
+            }
+
+            to {
+                scale: 1;
+            }
+        }
+
+        .title-1 {
+            display: block;
+            padding: 50px;
+            margin: 50px;
+            margin-left: 40px;
+            font-size: 50px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            cursor: default;
+        }
+
+        .wlcimg {
+            margin-top: 10px;
+            margin-left: 100px;
+            margin-bottom: 5px;
+            width: 700px;
+            height: 500px;
+            border-radius: 20px 20px;
+            box-shadow: 8px 2px 15px rgb(50, 40, 20);
+            overflow: hidden;
+        }
+
+        img {
+            width: 700px;
+            height: 500px;
+        }
+
+        /*---------------part2 categories-------------------*/
+        .catg {
+            display: flex;
+            justify-content: center;
+            animation: animate-2 5s linear;
+            animation-timeline: view();
+            animation-range: exit;
+
+        }
+
+        .part2 {
+            display: inline-block;
+            margin-left: 50px;
+            padding: 50px;
+            margin: 50px;
+            font-size: 35px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            font-weight: none;
+
+        }
+
+        .part2 h3 {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            cursor: default;
+        }
+
+        .categories ul {
+
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+
+        .categories ul li {
+            list-style: none;
+            padding-bottom: 10px;
+        }
+
+        .categories ul li::before {
+            content: "> ";
+            margin-left: 10px;
+            padding: 10px;
+        }
+
+        .categories ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        /*-----------------part 3 About-------------------*/
+
+        .part3 {
+            width: 100%;
+            background: linear-gradient(to right, skyblue, white, rgb(252, 252, 189), whitesmoke);
+            cursor: default;
+        }
+
+        .fullpart-3 {
+
+            animation: animate-2 10s linear, scrolling-2 10s linear;
+            animation-timeline: view(), view();
+            animation-range: exit, entry;
+        }
+
+        .title-3 {
+            display: flex;
+            justify-content: center;
+            margin-left: 50px;
+            padding: 50px;
+            margin: 50px;
+            font-size: 35px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .para-3 .p1 {
+            font-size: 25px;
+            text-align: justify;
+            padding: 50px;
+            padding-bottom: 10px;
+            word-spacing: 5px;
+            line-height: 35px;
+        }
+
+        .para-3 .p2 {
+            font-size: 25px;
+            text-align: justify;
+            padding: 50px;
+            padding-top: 10px;
+            word-spacing: 5px;
+            line-height: 35px;
+        }
+
+
+        /*-----------------part 4 Features-------------------*/
+        .title-4 {
+            display: flex;
+            justify-content: center;
+            font-size: 35px;
+            margin: 10px;
+            cursor: default;
+        }
+
+        .part-4 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            margin: 50px;
+            cursor: pointer;
+        }
+
+        @keyframes slideingfunc {
+            from {
+                transform: translateX(-100px);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes rotatefunc {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(120deg);
+            }
+        }
+
+        .part-4 img {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .feature-1 {
+            width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            border: 2px solid lightslategrey;
+            animation: slideingfunc 2s linear, animate-2 5s linear;
+            animation-timeline: view(), view();
+            animation-range: entry, exit;
+        }
+
+        .feature-2 {
+            width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            border: 2px solid lightslategrey;
+            animation: slideingfunc 2s linear, animate-2 5s linear;
+            animation-timeline: view(), view();
+            animation-range: entry, exit;
+        }
+
+        .feature-3 {
+            width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            border: 2px solid lightslategrey;
+            animation: slideingfunc 2s linear, animate-2 5s linear;
+            animation-timeline: view(), view();
+            animation-range: entry, exit;
+        }
+
+        .feature-4 {
+            width: 250px;
+            height: 350px;
+            border-radius: 10px;
+            border: 2px solid lightslategrey;
+            animation: slideingfunc 2s linear, animate-2 5s linear;
+            animation-timeline: view(), view();
+            animation-range: entry, exit;
+        }
+
+        .feature-1:hover,
+        .feature-2:hover,
+        .feature-3:hover,
+        .feature-4:hover {
+            background: linear-gradient(to right bottom, wheat 10%, white, white, wheat);
+            box-shadow: 1px 1px 10px black;
+        }
+
+        .feature-1 h4,
+        .feature-2 h4,
+        .feature-3 h4,
+        .feature-4 h4 {
+            font-size: 25px;
+            padding: 10px;
+        }
+
+        .feature-1 p,
+        .feature-2 p,
+        .feature-3 p,
+        .feature-4 p {
+            font-size: 20px;
+            padding: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            word-spacing: 2px;
+            text-align: justify;
+        }
+
+        /*----------------------part-5 Join us-------------------*/
+        .fullpart-5 {
+            width: 100%;
+            background: linear-gradient(to right, skyblue, white, rgb(252, 252, 189), whitesmoke);
+
+        }
+
+        .part-5 {
+            display: flex;
+            align-items: center;
+            cursor: default;
+            animation: animate-2 10s linear, scrolling-2 10s linear;
+            animation-timeline: view(), view();
+            animation-range: exit, entry;
+        }
+
+        .part-5 img {
+            border-radius: 15px;
+            margin: 25px;
+            width: 600px;
+            height: 400px;
+        }
+
+        .part-5 p {
+
+            font-size: 35px;
+            text-align: justify;
+            padding: 50px;
+            word-spacing: 10px;
+            line-height: 50px;
+        }
+
+        /*-------------------------part-6 How it works-------------------*/
+        .part-6 {
+            width: 100%;
+            display: inline-block;
+            flex-direction: column;
+            background: linear-gradient(to right bottom, skyblue, white, skyblue, white, whitesmoke, white, skyblue);
+        }
+
+        .part-6 h2 {
+            font-size: 50px;
+            padding: 35px;
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 5px lightslategrey;
+        }
+
+        .part-6 .content-1 {
+            background: white;
+            margin: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 15px;
+            cursor: default;
+            transition: all 0.2s linear;
+            animation: animate-2 10s linear, scrolling-2 10s linear;
+            animation-timeline: view(), view();
+            animation-range: exit, entry;
+        }
+
+        .part-6 .content-1:hover {
+
+            background: linear-gradient(to right, wheat, white, white, wheat);
+            border-radius: 15px;
+            cursor: default;
+            box-shadow: 1px 1px 10px grey;
+        }
+
+        .part-6 .content-1 h4 {
+            font-size: 35px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            margin-bottom: 0;
+        }
+
+        .part-6 .content-1 p {
+
+            font-size: 25px;
+            text-align: center;
+            padding: 50px;
+            word-spacing: 5px;
+            line-height: 35px;
+            padding-top: 5px;
+        }
+
+        /*---------------------------Footer-----------------------------*/
+        .fullpart-footer {
+
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, wheat, whitesmoke);
+            padding: 10px;
+            box-sizing: border-box;
+
+        }
+
+        .fullpart-footer hr {
+            height: 1px;
+            background: black;
+        }
+
+        .fullpart-footer .design2024 {
+            display: flex;
+            padding: 10px;
+            font-size: 18px;
+            justify-content: center;
+        }
+
+        .footer {
+            padding: 20px;
+            height: 300px;
+            color: rgb(61, 58, 58);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fullpart-footer .footer .flogo {
+
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer .fpart-1 .logos {
+            width: 50px;
+            height: 50px;
+            padding: 5px;
+        }
+
+        .fpart-1,
+        .fpart-2,
+        .fpart-3 {
+            padding: 25px;
+            width: 20%;
+        }
+
+        .fpart-1 h2,
+        .fpart-2 h2,
+        .fpart-3 h2 {
+            padding-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            font-size: 35px;
+        }
+
+        .fpart-2 ul li {
+            list-style: none;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .fpart-2 ul li a {
+            text-decoration: none;
+            color: rgb(53, 51, 51);
+
+        }
+
+        .fpart-3 p {
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .undline {
+            text-decoration: underline;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fullpart-footer .footer hr,
+        .fullpart-footer .footer .design2024 {
+            display: none;
+        }
+
+        /*-----------------------------------------------desktop-----------------------------------------------------*/
+        @media (max-width:1200px) {
+
+            /*--------------------------------*/
+            #homepage1 {
+                column-count: 1;
+            }
+
+            /*------------welcome--------------*/
+
+            .title-1 {
+                font-size: 48px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .wlcimg {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                height: 500px;
+            }
+
+            /*---------------part2 categories-------------------*/
+            .catg {
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            .categories ul {
+                margin-left: 0;
+                padding-left: 0;
+                font-size: 50px;
+            }
+
+            .part2 {
+                font-size: 50px;
+
+            }
+
+            /*----------------------part-5 Join us-------------------*/
+            .part-5 p {
+                line-height: 45px;
+            }
+
+            .footer .fpart-1 .logos {
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+            }
+
+            .fpart-1,
+            .fpart-2,
+            .fpart-3 {
+                padding: 15px;
+                width: 25%;
+            }
+        }
+
+        /*-----------------------------------------------Tablet-----------------------------------------------------*/
+        @media (max-width:1050px) {
+
+            /*--------------------------------*/
+            #homepage1 {
+                column-count: 1;
+            }
+
+            /*------------welcome--------------*/
+
+            .title-1 {
+                font-size: 40px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .wlcimg {
+                width: 75%;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                height: 500px;
+            }
+
+            /*---------------part2 categories-------------------*/
+            .catg {
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            .categories ul {
+                margin-left: 0;
+                padding-left: 0;
+                font-size: 35px;
+            }
+
+            .part2 {
+                font-size: 40px;
+
+            }
+
+            /*----------------------part-5 Join us-------------------*/
+            .fullpart-5 {
+                width: 100%;
+                background: linear-gradient(to right, skyblue, white, rgb(252, 252, 189), whitesmoke);
+
+            }
+
+            .part-5 {
+                display: flex;
+                align-items: center;
+                cursor: default;
+                animation: animate-2 10s linear, scrolling-2 10s linear;
+                animation-timeline: view(), view();
+                animation-range: exit, entry;
+            }
+
+            .part-5 img {
+                border-radius: 15px;
+                margin: 25px;
+                width: 600px;
+                height: 400px;
+            }
+
+            .part-5 p {
+                line-height: 45px;
+            }
+
+            .footer .fpart-1 .logos {
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+            }
+
+            .fpart-1,
+            .fpart-2,
+            .fpart-3 {
+                padding: 15px;
+                width: 25%;
+            }
+
+            /*----------------------------about--------------------------*/
+            .title-3 {
+                font-size: 30px;
+            }
+
+            .para-3 .p1 {
+                font-size: 22px;
+            }
+
+            .para-3 .p2 {
+                font-size: 22px;
+            }
+
+            /*-----------------part 4 Features-------------------*/
+            .title-4 {
+                font-size: 30px;
+            }
+
+            .part-4 {
+                flex-wrap: wrap;
+                padding: 0 10%;
+                flex-direction: row;
+                margin-bottom: 0;
+            }
+
+            .feature-1,
+            .feature-2,
+            .feature-3,
+            .feature-4 {
+                margin-bottom: 50px;
+            }
+
+            /*----------------------part-5 Join us-------------------*/
+
+            .part-5 img {
+                width: 300px;
+                height: 200px;
+            }
+
+            .part-5 p {
+
+                font-size: 30px;
+                word-spacing: 5px;
+                line-height: 45px;
+            }
+
+            /*-------------------------part-6 How it works-------------------*/
+
+            .part-6 h2 {
+                font-size: 40px;
+            }
+
+            .part-6 .content-1 h4 {
+                font-size: 30px;
+            }
+
+            .part-6 .content-1 p {
+
+                font-size: 22px;
+                word-spacing: 5px;
+                line-height: 30px;
+            }
+
+
+            /*------------------------footer----------------------*/
+
+
+            .footer .fpart-1 .logos {
+                width: 40px;
+                height: 40px;
+                padding: 2px;
+                margin-left: 10px;
+            }
+
+            .fpart-1,
+            .fpart-2,
+            .fpart-3 {
+                padding: 15px;
+                width: 25%;
+                font-size: 30px;
+
+            }
+
+            .fpart-3 p {
+                font-size: 12px;
+            }
+
+            .fpart-3 .undline {
+                font-size: 15px;
+            }
+        }
+
+        /*-----------------------------------------------Tablet-2-----------------------------------------------------*/
+        @media (max-width:800px) {
+
+            /*-------------header part 2 mobile view----------------*/
+            .headerpart-2 {
+                display: flex;
+            }
+
+            .navbar-2 {
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(to right, wheat, rgb(232, 198, 119));
+                cursor: default;
+                padding: 10px 15px;
+                color: black;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo-2 {
+                font-size: 35px;
+                font-weight: 150px;
+                color: black;
+            }
+
+            .navbar-2 #nav-btn-2 {
+                width: 100px;
+                flex-shrink: 0;
+                font-size: 5px;
+                background: none;
+                border: none;
+                outline: none;
+                color: white;
+                cursor: pointer;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 10px 20px;
+            }
+
+            .navbar-2 button .bar {
+                width: 50px;
+                padding: 5px;
+                background: white;
+                border-radius: 10px;
+            }
+
+            .side-nav-2 .links-2 {
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 2;
+                height: 100vh;
+                width: 250px;
+                background: white;
+            }
+
+            .side-nav-2 .links-2 .links {
+                display: flex;
+                align-items: center;
+                padding: 12px 15px;
+                font-weight: 200px;
+                text-decoration: none;
+                font-size: 16px;
+                color: #333;
+            }
+
+            .side-nav-2 .links-2 .links.active,
+            .side-nav-2 .links-2 .links:hover {
+                color: red;
+                background: #eee;
+            }
+
+            .side-nav-2 .links-2 {
+                transform: translateX(250px);
+                transition: 0.5s;
+            }
+
+            .side-nav-2.open .links-2 {
+                transform: translateX(0);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            }
+
+            .side-nav-2 .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.2);
+                z-index: 1;
+                backdrop-filter: blur(2px);
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s;
+            }
+
+            .open .overlay {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            /*----------------------Header 1-------------------*/
+            .navbar {
+                display: none;
+            }
+
+            /*----------------------part-5 Join us-------------------*/
+
+
+            .part-5 p {
+
+                font-size: 25px;
+                word-spacing: 3px;
+                line-height: 40px;
+            }
+
+            /*------------------------footer----------------------*/
+
+
+            .footer .fpart-1 .logos {
+                width: 13%;
+                height: 10%;
+            }
+
+            .fpart-1,
+            .fpart-2,
+            .fpart-3 {
+                padding: 10px;
+                font-size: 30px;
+
+            }
+
+            .fpart-1 h2,
+            .fpart-2 h2,
+            .fpart-3 h2 {
+                font-size: 30px;
+            }
+
+            .fpart-2 ul li {
+                font-size: 15px;
+            }
+
+
+            .fpart-3 p {
+                font-size: 12px;
+            }
+
+            .fpart-3 .undline {
+                font-size: 18px;
+            }
+
+            .fullpart-footer hr {
+                height: 0;
+                background: black;
+            }
+
+            .fullpart-footer .design2024 {
+                font-size: 14px;
+            }
+        }
+
+        /*-----------------------------------------------Tablet-3-----------------------------------------------------*/
+        @media (max-width:600px) {
+            /*-------------header part 2 mobile view----------------*/
+
+            .logo-2 {
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .navbar-2 button .bar {
+                width: 45px;
+                padding: 4px;
+            }
+
+            /*---------------------welcome-------------------------*/
+
+            .wlcimg {
+                width: 75%;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            /*---------------part2 categories-------------------*/
+
+            .categories ul {
+                font-size: 30px;
+            }
+
+            .part2 {
+                font-size: 30px;
+
+            }
+
+            /*----------------------part-5 Join us-------------------*/
+
+            .part-5 {
+                flex-direction: column;
+            }
+
+            .fullpart-5 .part-5 img {
+                width: 400px;
+                height: 300px;
+            }
+
+            .fullpart-5 .part-5 p {
+                line-height: 30px;
+                font-size: 25px;
+            }
+
+            /*----------------------footer-------------------------*/
+            .footer .fpart-1 .logos {
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+            }
+
+            .fullpart-footer .fpart-1,
+            .fullpart-footer .fpart-2,
+            .fullpart-footer .fpart-3 {
+                padding: 15px;
+                width: 100%;
+            }
+
+            /*----------------------------about--------------------------*/
+            .title-3 {
+                font-size: 22px;
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .para-3 .p1 {
+                font-size: 18px;
+            }
+
+            .para-3 .p2 {
+                font-size: 18px;
+            }
+
+            /*-----------------part 4 Features-------------------*/
+            .title-4 {
+                font-size: 25px;
+            }
+
+            .part-4 {
+                padding-left: 0;
+                padding-right: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            .feature-1,
+            .feature-2,
+            .feature-3,
+            .feature-4 {
+                margin-bottom: 25px;
+            }
+
+            /*----------------------part-5 Join us-------------------*/
+
+            .part-5 img {
+                width: 300px;
+                height: 200px;
+            }
+
+            .part-5 p {
+
+                font-size: 30px;
+                word-spacing: 5px;
+                line-height: 45px;
+            }
+
+            /*-------------------------part-6 How it works-------------------*/
+
+            .part-6 h2 {
+                font-size: 30px;
+            }
+
+            .part-6 .content-1 h4 {
+                font-size: 25px;
+            }
+
+            .part-6 .content-1 p {
+
+                font-size: 18px;
+                line-height: 25px;
+                justify-content: justify;
+            }
+
+
+            /*------------------------footer----------------------*/
+
+
+            .fullpart-footer .footer .fpart-1 .logos {
+                width: 25px;
+                height: 25px;
+                padding: 2px;
+                margin-left: 10px;
+            }
+
+            .fullpart-footer .footer .fpart-1,
+            .fullpart-footer .footer .fpart-2,
+            .fullpart-footer .footer .fpart-3 {
+                padding: 15px;
+                width: 100%;
+                font-size: 30px;
+
+            }
+
+            .fullpart-footer .footer {
+                width: 100%;
+            }
+
+            .fullpart-footer .footer {
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .fullpart-footer .footer hr,
+            .fullpart-footer .footer .design2024 {
+                display: inline-block;
+            }
+
+            .fullpart-footer hr,
+            .fullpart-footer .design2024 {
+                display: none;
+            }
+
+            .fullpart-footer .footer {
+
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, wheat, whitesmoke);
+                text-align: center;
+
+            }
+        }
+
+        /*-----------------------------------------------mobile view-----------------------------------------------------*/
+        @media (max-width:400px) {
+
+            /*-------------header part 2 mobile view----------------*/
+
+            .logo-2 {
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .navbar-2 button .bar {
+                width: 30px;
+                padding: 3px;
+            }
+
+            .title {
+                padding: 15px 0;
+                font-size: 22px;
+
+            }
+
+            .welpage1 .title-1 {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            .wlcimg {
+                width: 60%;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            /*---------------part2 categories-------------------*/
+
+            .categories ul {
+                font-size: 20px;
+            }
+
+            .part2 {
+                font-size: 25px;
+
+            }
+
+            /*----------------------part-5 Join us-------------------*/
+
+            .part-5 {
+                flex-direction: column;
+            }
+
+            .fullpart-5 .part-5 img {
+                width: 300px;
+                height: 200px;
+            }
+
+            .fullpart-5 .part-5 p {
+                line-height: 28px;
+                font-size: 20px;
+            }
+
+            /*----------------------footer-------------------------*/
+            .footer .fpart-1 .logos {
+                width: 50px;
+                height: 50px;
+                padding: 5px;
+            }
+
+            .fullpart-footer .fpart-1,
+            .fullpart-footer .fpart-2,
+            .fullpart-footer .fpart-3 {
+                padding: 15px;
+                width: 100%;
+            }
+
+            /*----------------------------about--------------------------*/
+            .title-3 {
+                font-size: 20px;
+            }
+
+            .para-3 .p1 {
+                font-size: 16px;
+                line-height: 25px;
+            }
+
+            .para-3 .p2 {
+                font-size: 16px;
+                line-height: 25px;
+            }
+
+            /*-------------------------part-6 How it works-------------------*/
+
+            .part-6 h2 {
+                font-size: 28px;
+            }
+
+            .part-6 .content-1 h4 {
+                font-size: 22px;
+                text-align: center;
+            }
+
+            .part-6 .content-1 p {
+
+                font-size: 18px;
+                line-height: 25px;
+                text-align: justify;
+            }
+
+
+            /*------------------------footer----------------------*/
+
+            .fullpart-footer .footer .fpart-1 .logos {
+                width: 25px;
+                height: 25px;
+                padding: 2px;
+                margin-left: 10px;
+            }
+
+            .fullpart-footer .footer .fpart-1 h2,
+            .fullpart-footer .footer .fpart-2 h2,
+            .fullpart-footer .footer .fpart-3 h2 {
+                padding: 15px;
+                width: 100%;
+                font-size: 25px;
+
+            }
+
+            .fullpart-footer .footer {
+                width: 100%;
+            }
+
+            .fullpart-footer .footer hr,
+            .fullpart-footer .footer .design2024 {
+                display: inline-block;
+            }
+
+            .fullpart-footer hr,
+            .fullpart-footer .design2024 {
+                display: none;
+            }
+
+            .fullpart-footer .footer {
+
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, wheat, whitesmoke);
+                text-align: center;
+
+            }
+
+        }
+
+        /*-----------------------------------------------mobile view 2-----------------------------------------------------*/
+        @media (max-width:300px) {
+
+            /*-------------header part 2 mobile view----------------*/
+
+            .logo-2 {
+                font-size: 16px;
+                text-align: center;
+            }
+
+            .navbar-2 button .bar {
+                width: 25px;
+                padding: 2px;
+            }
+
+            .navbar-2 .nav-btn-2 {
+                padding: 10px 10px;
+            }
+
+            .navbar-2 {
+                width: 100%;
+                height: 100px;
+                padding: 5px 5px;
+            }
+
+            .title {
+                padding: 15px 0;
+                font-size: 20px;
+
+            }
+
+            .welpage1 .title-1 {
+                font-size: 25px;
+                padding: 10px 0;
+            }
+
+            .wlcimg {
+                margin-top: 10px;
+                margin-left: 50px;
+                box-sizing: border-box;
+            }
+
+            /*------------------------categories------------------------*/
+            .categories ul {
+                font-size: 16px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!----------------part-1 Title------------------->
+    <header class="navbar">
+        <h1 class="logo">Children Vaccination Remainder</h1>
+        <nav class="bar">
+            <ul>
+                <li><a href="http://localhost/Project-1/Home.html">HOME</a></li>
+                <li><a href="http://localhost/Project-1/Webpages/DoctorPage.php">DOCTOR</a></li>
+                <li><a href="http://localhost/Project-1/Webpages/PatientPage.php">PARENT</a></li>
+                <li><a href="http://localhost/Project-1/Webpages/Help.html">HELP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!----------------Welcome and categories------------------->
+    <div class="fullpart-1">
+        <div id="home" class="title">Children Vaccination Remainder</div>
+        <div id="homepage1">
+            <div class="welc">
+                <div class="welpage1">
+                    <div class="title-1 part1">Welcome to our Website</div>
+                    <div class="wlcimg part1">
+                        <img src="Images/Welcome.jpg">
+                    </div>
+                </div>
+                <div class="catg">
+                    <div class="categories part2">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#aboutus">About us</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#howitworks">How it works</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------part-3 About------------------->
+    <div id="aboutus"></div>
+    <br><br>
+    <br>
+    <div class="part3">
+        <div class="fullpart-3">
+            <div class="title-3">
+                <h3>About Children Vaccination Remainder</h3>
+            </div>
+            <div class="para-3">
+                <p class="p1">Childhood immunization is crucial for protecting children from serious and potentially
+                    life-threatening
+                    diseases such as Measles, polio, Tuberculosis, Hepatitis B, Diphtheria, Pertussis (Whooping cough),
+                    Tetanus and more. Despite the availability of national health programs like the National Health
+                    Mission
+                    (NHM) aimed at newborn and child health, vaccination rates often fall short of optimal levels
+                    globally.
+                    This shortfall underscores the ongoing public health risk posed by vaccine-preventable diseases.</p>
+                <p class="p2">Our project aims to address this challenge by providing a streamlined solution for parents
+                    and
+                    caregivers
+                    to manage and track their child’s vaccination schedule effectively. Leveraging the power of modern
+                    technology, particularly SMS (Short Message Service), our children vaccination remainder model
+                    ensures
+                    that parents receive timely notifications about upcoming vaccinations.</p>
+            </div>
+        </div>
+    </div>
+    <!----------------part-4 Features------------------->
+    <div id="features"></div>
+    <br>
+    <br><br><br>
+    <div class="title-4">
+        <h3>Features</h3>
+    </div>
+    <div class="part-4">
+        <div class="feature-1">
+            <img src="Images/Schedule.jpg">
+            <h4>Vaccination Schedules</h4>
+            <p>Easily input and manage your child's vaccination schedule</p>
+        </div>
+        <div class="feature-2">
+            <img src="Images/automaticreminder.jpg">
+            <h4>Automatic Reminders</h4>
+            <p>Recieve SMS notifications before each vaccination is due</p>
+        </div>
+        <div class="feature-3">
+            <img src="Images/healthmonitoring.jpg">
+            <h4>Health Monitoring</h4>
+            <p>Stay informed about the latest research and vaccination programs to optimize your child's health</p>
+        </div>
+        <div class="feature-4">
+            <img src="Images/accessibility.jpg">
+            <h4>Accessibility</h4>
+            <p>Accessible and easy-to-use platform designed to prioritize child health</p>
+        </div>
+    </div>
+    <!------------------part-5 Join us------------------->
+    <br><br><br>
+    <div class="fullpart-5">
+        <div class="part-5">
+            <img src="Images/Joinus.jpg">
+            <p>Join us in safeguarding the health of our children. Together, we can ensure that every child receives
+                timely
+                vaccinations and stays protected against preventable diseases</p>
+        </div>
+    </div>
+    <br><br><br>
+    <!------------------part-6 How it works-------------------->
+    <div class="part-6" id="howitworks">
+        <h2>How it works</h2>
+        <div class="content-1">
+            <h4>1. Input child's details</h4>
+            <p>Begin by entering yoru child's information into our easy-to-use interface. Include details such as your
+                child's name, date of birth, and any previous vaccination history if available</p>
+        </div>
+        <div class="content-1">
+            <h4>2. Set up vaccination schedule</h4>
+            <p>Once the initial details are entered our system will help you set up a personalized vaccination schedule
+                based on recommended immunization guidelines. You can input the dates of past vaccinations and upcoming
+                due dates</p>
+        </div>
+        <div class="content-1">
+            <h4>3. Receive timely notifications</h4>
+            <p>Our system utilizes SMS (Short Message Service) to send you automatic reminders before each scheduled
+                vaccination. These reminders ensure you never miss a crucial immunization date for your child</p>
+        </div>
+        <div class="content-1">
+            <h4>4. Stay informed and updated</h4>
+            <p>Stay informed about the latest advancements in childhood immunization through our platform. We provide
+                updates on new vaccination programs, research findings, and health tips to support your child's
+                well-being</p>
+        </div>
+        <div class="content-1">
+            <h4>5. Access anytime, anywhere</h4>
+            <p>Our platform is designed to be accessible from any device with internet access. Whether you're at home or
+                on the go, you can easily check and update vaccination schedules</p>
+        </div>
+    </div>
+    <!-----------------Footer-------------------->
+    <div id="contact"></div>
+    <br>
+    <br><br><br>
+    <footer class="fullpart-footer">
+        <div class="footer ">
+            <div class="fpart-1">
+                <h2>Follow Us</h2>
+                <div class="flogo">
+                    <img class="logos" src="Logo/facebook.svg">
+                    <img class="logos" src="Logo/twitter.svg">
+                    <img class="logos" src="Logo/instagram.svg">
+                    <img class="logos" src="Logo/linkedin.svg">
+                </div>
+            </div>
+            <div class="fpart-2">
+                <h2>Quick Links</h2>
+                <div>
+                    <ul>
+                        <li><a href="#aboutus">About us</a></li>
+                        <li><a href="#">Doctor</a></li>
+                        <li><a href="#">Patient</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fpart-3">
+                <h2>Contact Us</h2>
+                <p class="undline">Email</p>
+                <p> marimuthus121201@gmail.com</p>
+                <p class="undline">Phone</p>
+                <p>+91 8056406572</p>
+                <p class="undline">Address</p>
+                <p>Sample address 123 street</p>
+            </div>
+            <div class="fpart-4 mobileview">
+                <center>
+                    <hr width="90%">
+                </center>
+            </div>
+            <div class="design2024">Copyright @2024 All rights reserved | This template is made with by children
+                vaccination remainder</div>
+        </div>
+        <center>
+            <hr width="90%">
+        </center>
+        </div>
+        <div class="design2024">Copyright (c) 2024 Mari121201 All rights reserved | This template is made with by children
+            vaccination remainder</div>
+    </footer>
+    <script src="/Main.js"></script>
+</body>
+
+</html>
