@@ -16,7 +16,7 @@ A website designed to help parents track and remainder their children vaccinatio
 2. Set up the database:
    - Open phpMyAdmin from your XAMPP control panel.
    - Create a new database for the project and named it for cvrdb.
-   - Import the SQL file provided in the database folder.
+   - Import the SQL file provided in the Database folder.
 3. Configure database settings:
    - Edit the database configuration file ( file locate in Project-1/private/database.php) to match your local database credentials.
 
